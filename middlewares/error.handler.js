@@ -3,7 +3,7 @@ function logErrors(err, req, res, next) {
   next(err);
 }
 
-function errorHadler(err, req, res, next) {
+function errorHadler(err, req, res) {
   res.status(500).json({
     nessage: err.message,
     stack: err.stack,
